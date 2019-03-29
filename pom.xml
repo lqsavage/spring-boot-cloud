@@ -31,10 +31,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <docker.plugin.version>1.0.0</docker.plugin.version>
+        <docker.plugin.version>0.4.13</docker.plugin.version>
         <docker.image.prefix>spring-boot-cloud</docker.image.prefix>
         <spring.cloud.version>Dalston.SR4</spring.cloud.version>
         <spring-boot-admin.version>1.5.4</spring-boot-admin.version>
+        <maven.plugin.version>2.18.1</maven.plugin.version>
     </properties>
 
     <dependencies>
@@ -51,6 +52,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.plugin.version}</version>
+            </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-server</artifactId>
